@@ -1,0 +1,4 @@
+<div [ngClass]="{'claro': this.servicio.getEstilo(), 'oscuro': !this.servicio.getEstilo()}">
+    <h2>Seleccionador de estilos</h2>
+    <button (click)="modoOscuro()">Modo oscuro</button>
+</div>

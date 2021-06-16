@@ -1,0 +1,17 @@
+<div class="containerEntrada" [ngClass]="{'claro': this.servicio.getEstilo(), 'oscuro': !this.servicio.getEstilo()}">
+    <form class="formulario" [formGroup]="formValidado">
+        <label>Titulo</label>
+        <div [ngClass]="{'invalid': formValidado.controls.titulo.invalid && formValidado.controls.titulo.touched}">
+            <input type="text" formControlName="titulo" size="50" placeholder="Añada un titulo">
+        </div>
+        <div *ngIf="formValidado.controls.titulo.invalid && formValidado.controls.titulo.touched" class="invalidtext">*Titulo obligatorio</div>
+        <label>Contenido</label>
+        <div [ngClass]="{'invalid': formValidado.controls.contenido.invalid && formValidado.controls.contenido.touched}">
+            <input type="text" formControlName="contenido" size="50" placeholder="Añada un contenido">
+        </div>
+        <div *ngIf="formValidado.controls.contenido.invalid && formValidado.controls.contenido.touched" class="invalidtext">*Contenido obligatorio</div>
+        <button (click)="insertarEntrada()" [disabled]="formValidado.invalid">Añadir entrada</button>
+        <button (click)="this.loginservicio.desloguear()">Cerrar sesion</button>
+    </form>
+</div>
+

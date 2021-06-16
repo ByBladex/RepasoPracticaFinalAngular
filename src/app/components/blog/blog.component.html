@@ -1,0 +1,7 @@
+<div class="containerEntrada" [ngClass]="{'claro': this.servicio.getEstilo(), 'oscuro': !this.servicio.getEstilo()}">
+    <h3>{{entrada.titulo | uppercase}}</h3>
+    <p>{{entrada.contenido}}</p>
+    <h5>{{entrada.fechaCreacion}}</h5>
+    <button (click)="eliminarEntrada(entrada)">Eliminar entrada</button>
+</div>
+

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #555;
+}
+
+.formulario{
+    width: max-content;
+    height: max-content;
+}
+
+.claro{
+    background-color: white;
+    color: black;
+}
+
+.oscuro{
+    background-color: #555;
+    color: white;
+}
+
+.container{
+    margin: auto;
+    margin-top: 300px;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+}
+
+
+.containerEntrada{
+    margin: auto;
+    margin-top: 100px;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+}
+
+.invalid{
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
+    width: min-content;
+}
+
+.invalidtext{
+    color: rgb(223, 83, 83);
+}

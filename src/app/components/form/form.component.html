@@ -1,0 +1,16 @@
+<div class="container" [ngClass]="{'claro': this.servicio.getEstilo(), 'oscuro': !this.servicio.getEstilo()}">
+    <form class="formulario" [formGroup]="formValidado">
+        <label>Email</label>
+        <div [ngClass]="{'invalid': formValidado.controls.email.invalid && formValidado.controls.email.touched}">
+            <input type="text" formControlName="email" size="50">
+        </div>
+        <div *ngIf="formValidado.controls.email.invalid && formValidado.controls.email.touched" class="invalidtext">*Email obligatorio</div>
+        <label>Password</label>
+        <div [ngClass]="{'invalid': formValidado.controls.password.invalid && formValidado.controls.password.touched}">
+            <input type="password" formControlName="password" size="50">
+        </div>
+        <div *ngIf="formValidado.controls.password.invalid && formValidado.controls.password.touched" class="invalidtext">*La contraseña debe contener mínimo 6 carácteres</div>
+        <button (click)="login(formValidado.value)" [disabled]="formValidado.invalid">Iniciar sesion</button>
+    </form>
+</div>
+
